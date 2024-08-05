@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #34495e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .form-container h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #7f8c8d;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            width: auto;
+        }
+        .form-group .gender,
+        .form-group .hobbies {
+            display: flex;
+            align-items: center;
+        }
+        .form-group .gender label,
+        .form-group .hobbies label {
+            margin-right: 20px;
+        }
+        .form-actions {
+            text-align: center;
+        }
+        .form-actions button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1abc9c;
+            color: #ecf0f1;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Student Registration Form</h2>
+        <form>
+            <div class="form-group">
+                <label for="first-name">First Name (max 30 characters and A-Z)</label>
+                <input type="text" id="first-name" name="first-name" maxlength="30">
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name (max 30 characters and A-Z)</label>
+                <input type="text" id="last-name" name="last-name" maxlength="30">
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <select id="dob-day" name="dob-day">
+                    <option>Day:</option>
+                    <!-- Add day options -->
+                </select>
+                <select id="dob-month" name="dob-month">
+                    <option>Month:</option>
+                    <!-- Add month options -->
+                </select>
+                <select id="dob-year" name="dob-year">
+                    <option>Year:</option>
+                    <!-- Add year options -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number (10 digit number)</label>
+                <input type="text" id="mobile" name="mobile" maxlength="10">
+            </div>
+            <div class="form-group gender">
+                <label>Gender</label>
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="city">City (max 30 characters a-z and A-Z)</label>
+                <input type="text" id="city" name="city" maxlength="30">
+            </div>
+            <div class="form-group">
+                <label for="pin-code">PIN Code (6 digit number)</label>
+                <input type="text" id="pin-code" name="pin-code" maxlength="6">
+            </div>
+            <div class="form-group">
+                <label for="state">State (max 30 characters a-z and A-Z)</label>
+                <input type="text" id="state" name="state" maxlength="30">
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option>India</option>
+                    <!-- Add more countries if needed -->
+                </select>
+            </div>
+            <div class="form-group hobbies">
+                <label>Hobbies</label>
+                <label><input type="checkbox" name="hobbies" value="drawing"> Drawing</label>
+                <label><input type="checkbox" name="hobbies" value="singing"> Singing</label>
+                <label><input type="checkbox" name="hobbies" value="dancing"> Dancing</label>
+                <label><input type="checkbox" name="hobbies" value="sketching"> Sketching</label>
+                <label><input type="checkbox" name="hobbies" value="others"> Others</label>
+            </div>
+            <div class="form-group">
+                <label>Qualification</label>
+                <table>
+                    <tr>
+                        <th>Sl.No.</th>
+                        <th>Examination</th>
+                        <th>Board</th>
+                        <th>Percentage</th>
+                        <th>Year of Passing</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Class X</td>
+                        <td><input type="text" maxlength="10"></td>
+                        <td><input type="text" maxlength="5"></td>
+                        <td><input type="text" maxlength="4"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Class XII</td>
+                        <td><input type="text" maxlength="10"></td>
+                        <td><input type="text" maxlength="5"></td>
+                        <td><input type="text" maxlength="4"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Graduation</td>
+                        <td><input type="text" maxlength="10"></td>
+                        <td><input type="text" maxlength="5"></td>
+                        <td><input type="text" maxlength="4"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Masters</td>
+                        <td><input type="text" maxlength="10"></td>
+                        <td><input type="text" maxlength="5"></td>
+                        <td><input type="text" maxlength="4"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="form-group">
+                <label>Courses Applied For</label>
+                <label><input type="radio" name="course" value="php"> Php</label>
+                <label><input type="radio" name="course" value="python"> Python</label>
+                <label><input type="radio" name="course" value="java"> Java</label>
+                <label><input type="radio" name="course" value="digital-marketing"> Digital Marketing</label>
+            </div>
+            <div class="form-actions">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
